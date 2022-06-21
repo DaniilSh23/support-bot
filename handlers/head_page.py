@@ -67,7 +67,7 @@ async def send_users_message(message: types.Message, state: FSMContext):
     await message.forward(chat_id=manager)
 
     # для ДЕМОНСТРАЦИИ БОТА отправка всем, кто написал их же сообщений
-    await BOT.send_message(chat_id=manager,
+    await BOT.send_message(chat_id=message.chat.id,
                            text=f'{emojize(":robot:")}<b>ПОЛУЧЕНО НОВОЕ ОБРАЩЕНИЕ</b>{emojize(":bellhop_bell:")}\nПересылаю...')
     await message.forward(chat_id=message.chat.id)
 
