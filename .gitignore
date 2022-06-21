@@ -4,3 +4,4 @@
 /middlewares/__pycache__/
 /settings/__pycache__/
 /states/__pycache__/
+/command_on_heroku
